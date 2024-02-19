@@ -252,3 +252,30 @@ $.when($.ready).then(() => {
     }
   });
 });
+
+const clock = $('#clock');
+
+if (clock.length) {
+  function setDate() {
+    const date = new Date();
+    const formatDate = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }
+    const formatDay = {
+      weekday: 'long'
+    }
+    const formatHour = {
+      hour: 'numeric',
+    }
+    const formatMinute = {
+      minute: 'numeric',
+    }
+    $('.date', clock).html(`<span>${date.toLocaleDateString(undefined, formatDay)}</span>${date.toLocaleDateString(undefined, formatDate)}`)
+    $('.time', clock).html(`${date.toLocaleTimeString(undefined, formatHour)}<span class="blink">:</span>${date.toLocaleTimeString(undefined, formatMinute)}`)
+
+  }
+  setInterval(setDate, 1000);
+  setDate()
+}

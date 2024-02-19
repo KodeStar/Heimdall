@@ -1,6 +1,7 @@
 <?php
 $treat_tags_as = \App\Setting::fetch('treat_tags_as');
 ?>
+<div class="tagcontainer">
 @if( $treat_tags_as == 'tags')
     @if($taglist->first())
         <div id="taglist" class="taglist">
@@ -11,3 +12,4 @@ $treat_tags_as = \App\Setting::fetch('treat_tags_as');
         </div>
     @endif
 @endif
+</div>

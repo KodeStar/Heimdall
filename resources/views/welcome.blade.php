@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('partials.taglist')
+    @include('partials.headerbar')
     @include('partials.search')
 
     @if((isset($apps) && $apps->first()) || (isset($categories) && $categories->first()))
