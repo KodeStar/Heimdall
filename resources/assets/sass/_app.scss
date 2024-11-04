@@ -1208,3 +1208,22 @@ select:-webkit-autofill:focus {
 		}
 	}
 }
+
+.item-container.item-app {
+	.item {
+		&:after {
+			display: none;
+		}
+		width: 70px;
+		height: 70px;
+		padding:3px;
+		border-radius: 15px;
+		.app-icon-container {
+			margin-right: 0;
+		}
+		.details {
+			position: absolute;
+			bottom: -20px;
+		}
+	}
+}

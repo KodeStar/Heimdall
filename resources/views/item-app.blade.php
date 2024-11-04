@@ -1,4 +1,4 @@
-                    <section class="item-container{{ $app->droppable . ' ' . $app->getTagClass()}}" data-name="{{ $app->title }}" data-id="{{ $app->id }}">
+                    <section class="item-app item-container{{ $app->droppable . ' ' . $app->getTagClass()}}" data-name="{{ $app->title }}" data-id="{{ $app->id }}">
                         <div class="item" style="background-color: {{ $app->colour }}">
                             <div class="app-icon-container">
                                 @if($app->icon)
@@ -13,7 +13,7 @@
                                 <div data-id="{{ $app->id }}" data-dataonly="{{ $app->getconfig()->dataonly ?? '0' }}" class="livestats-container{{ title_color($app->colour) }}"></div>
                                 @endif
                             </div>
-                            <a rel="noopener noreferrer" onauxclick="this.blur();" onclick="this.blur();" class="link{{ title_color($app->colour) }}"{!! $app->link_target !!} href="{{{ $app->link }}}"><i class="fas {{{ $app->link_icon }}}"></i></a>
+                            <a rel="noopener noreferrer" onauxclick="this.blur();" onclick="this.blur();" class="link{{ title_color($app->colour) }}"{!! $app->link_target !!} href="{{{ $app->link }}}"></a>
                             <?php /*
                             @if($app->enhanced() === true && (bool)$app->getConfig()->enabled === true)
                             <div class="tile-actions refresh">

@@ -6,7 +6,7 @@
                 <div class="category item-container" data-name="{{ $category->title }}" data-id="{{ $category->id }}">
                 <div class="title"><a href="{{ $category->link }}" style="{{ $category->colour ? 'color: ' . $category->colour .';' : '' }}">{{ $category->title }}</a></div>
                 @foreach($apps as $app)
-                    @include('item')
+                    @include('item-app')
                 @endforeach
                 </div>
             @endforeach
@@ -15,7 +15,7 @@
         @else
 
             @foreach($apps as $app)
-                @include('item')
+                @include('item-app')
             @endforeach
             @include('add')
         @endif
